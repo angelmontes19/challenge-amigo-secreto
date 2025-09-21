@@ -33,3 +33,16 @@ function mostrarAmigos() {
         lista.innerHTML += `<li>${amigos[i]}</li>`;
     }
 }
+function sortearAmigo(){
+    let amigoSorteado;
+    if(amigos === 0){
+        alert("No hay amigos para sortear");
+    }
+    else{
+        sorteado = Math.floor(Math.random()*amigos.length);
+        amigoSorteado = amigos[sorteado];
+    }
+    let mostrarAmigoSorteado = document.getElementById("resultado");
+    mostrarAmigoSorteado.innerHTML = amigoSorteado;
+    console.log(amigoSorteado);
+}
