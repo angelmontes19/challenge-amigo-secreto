@@ -3,7 +3,6 @@ let amigos = [];
 
 function agregarAmigo(){
    let amigo = document.querySelector('#amigo').value;
-    console.log(amigo);
     if( document.querySelector('#amigo').value == ''){
         alert("Por favor, inserte un nombre");
     }
@@ -11,7 +10,6 @@ function agregarAmigo(){
         if(!amigos.includes(amigo)){
                 amigos.push(amigo);
                 mostrarAmigos();
-                console.log(amigos);
             }
             else{
                 alert("Ese nombre ya fue agregado");
@@ -35,7 +33,7 @@ function mostrarAmigos() {
 }
 function sortearAmigo(){
     let amigoSorteado;
-    if(amigos === 0){
+    if(amigos.length === 0){
         alert("No hay amigos para sortear");
     }
     else{
@@ -43,6 +41,6 @@ function sortearAmigo(){
         amigoSorteado = amigos[sorteado];
     }
     let mostrarAmigoSorteado = document.getElementById("resultado");
-    mostrarAmigoSorteado.innerHTML = amigoSorteado;
-    console.log(amigoSorteado);
+    mostrarAmigoSorteado.innerHTML = amigoSorteado ? amigoSorteado : "";
+
 }
